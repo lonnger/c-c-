@@ -1,0 +1,10 @@
+^E:\HKCRC\SOFTWARE\C++\BUILD\CMAKEFILES\AA7046CBFE82156E003F54B16FACFC29\GENERATE.STAMP.RULE
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SE:/HKCRC/Software/C++ -BE:/HKCRC/Software/C++/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/HKCRC/Software/C++/build/EmbeddedProject.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
